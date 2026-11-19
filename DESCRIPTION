@@ -1,5 +1,5 @@
 Package: PPtree
-Version: 2.3.0.9001
+Version: 2.3.0.9002
 Title: Projection Pursuit Classification Tree
 Authors@R: c(person(given = "Eun-Kyung", family = "Lee",
                     role = c("aut", "cre"),
@@ -16,3 +16,4 @@ Packaged: 2014-05-08 07:05:19 UTC; EKLee
 NeedsCompilation: yes
 Repository: CRAN
 Date/Publication: 2014-05-08 10:34:32
+Remotes: cran/penalizedLDA@7f3d3654660329d799272252d3c1120f77c27cc6

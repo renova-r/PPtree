@@ -15,7 +15,9 @@ install.packages("PPtree", repos = c(
 ))
 ```
 
-Version `2.3.0.9001` is based on [CRAN 2.3.0](https://cran.r-project.org/package=PPtree).
+Version `2.3.0.9002` is based on [CRAN 2.3.0](https://cran.r-project.org/package=PPtree).
+
+Renova supplies archived penalizedLDA 1.1 from its pinned upstream revision. CRAN supplies flsa. [Pinned penalizedLDA source](https://github.com/cran/penalizedLDA/tree/7f3d3654660329d799272252d3c1120f77c27cc6)
 
 ## Credit
 
