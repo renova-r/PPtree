@@ -1,11 +1,16 @@
 Package: PPtree
-Version: 2.3.0
-Date: 2014-05-08
-Title: Projection pursuit classification tree
-Author: Eun-Kyung Lee, Yoondong Lee
+Version: 2.3.0.9001
+Title: Projection Pursuit Classification Tree
+Authors@R: c(person(given = "Eun-Kyung", family = "Lee",
+                    role = c("aut", "cre"),
+                    email = "lee.eunk@gmail.com"),
+             person(given = "Yoondong", family = "Lee",
+                    role = "aut"))
 Maintainer: Eun-Kyung Lee <lee.eunk@gmail.com>
-Imports: MASS (>= 3.1-20), penalizedLDA (>= 1.0)
-Description: Projection pursuit classification tree using LDA, Lr or PDA projection pursuit index
+Imports: MASS (>= 3.1-20), penalizedLDA (>= 1.0), stats, graphics, grDevices
+Description: Fits projection pursuit classification trees using the LDA, Lr or PDA
+    projection pursuit index.
+    Compatibility updates by Renova.
 License: LGPL-2.1
 Packaged: 2014-05-08 07:05:19 UTC; EKLee
 NeedsCompilation: yes

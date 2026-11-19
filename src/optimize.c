@@ -25,7 +25,7 @@ void optimize2(int *fn, int *fp, int *groups, double *fvals, int *groupraw,int *
 void optimize3(int *fn, int *fp, int *groups, double *fvals, int *groupraw, int *gname,
 	     int *ngroup, int *method, double *cooling, double *temp_start,
 	      int *projdim, double *val, double *proj, int *r,double *lambda);
-void iszero (int *fn, int *fp,double *vals,double *sum);
+void pp_iszero (int *fn, int *fp,double *vals,double *sum);
 
 void normal_fill1 (int *fn, int *fp,double *datavals, double delta, double *basevals);
 void orthonormal (double *projvals, int *fn, int *fp);
@@ -78,7 +78,8 @@ void normal_fill (int *fn, int *fp,double *fvals, double delta, double *base)
 }
 
 
-void iszero (int *fn, int *fp,double *vals,double *sum)
+/* renamed from iszero: that name is a macro in C23 <math.h> (glibc) */
+void pp_iszero (int *fn, int *fp,double *vals,double *sum)
 { 
   int i, j,n,p;
   n=*fn; p=*fp;
@@ -222,7 +223,7 @@ void optimize1(int *fn, int *fp, int *groups, double *fvals, int *groupraw,int *
   sum = (double *) R_alloc(1, sizeof(double)); 
   /*  initrandom(start); */
   GetRNGstate();
-  iszero(fp,projdim,proj_best,sum);
+  pp_iszero(fp,projdim,proj_best,sum);
   if (!(*sum))
   { normal_fill1 (fp,projdim,proj_best, 1.0,proj_best);          
     orthonormal (proj_best,fp,projdim);
@@ -372,7 +373,7 @@ void optimize2(int *fn, int *fp, int *groups, double *fvals, int *groupraw, int 
   sum = (double *) R_alloc(1, sizeof(double)); 
   /*  initrandom(start); */
   GetRNGstate();
-  iszero(fp,projdim,proj_best,sum);
+  pp_iszero(fp,projdim,proj_best,sum);
   if (!(*sum))
   { normal_fill1 (fp,projdim,proj_best, 1.0,proj_best);          
     orthonormal (proj_best,fp,projdim);
@@ -537,7 +538,7 @@ void optimize3(int *fn, int *fp, int *groups, double *fvals, int *groupraw,int *
   sum = (double *) R_alloc(1, sizeof(double)); 
   /*  initrandom(start); */
   GetRNGstate();
-  iszero(fp,projdim,proj_best,sum);
+  pp_iszero(fp,projdim,proj_best,sum);
   if (!(*sum))
   { normal_fill1 (fp,projdim,proj_best, 1.0,proj_best);          
     orthonormal (proj_best,fp,projdim);
